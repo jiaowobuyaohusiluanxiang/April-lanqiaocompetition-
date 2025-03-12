@@ -1,14 +1,8 @@
-一级标题：⌘1 (command + 1)
-
-二级标题：⌘2 (command + 2)
-
-三级标题：⌘3 (command + 3)
-
-四级标题：⌘4 (command + 4)
-
-五级标题：⌘5 (command + 5)
-
-
+1. 一级标题：⌘1 (command + 1)
+2. 二级标题：⌘2 (command + 2)
+3. 三级标题：⌘3 (command + 3)
+4. 四级标题：⌘4 (command + 4)
+5. 五级标题：⌘5 (command + 5)
 
 
 
