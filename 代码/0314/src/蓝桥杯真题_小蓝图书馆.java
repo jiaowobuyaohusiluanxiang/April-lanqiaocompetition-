@@ -1,10 +1,10 @@
 import java.util.Scanner;
-import java.util.Map;
-import java.util.HashMap;
+import java.util.*;
+
 // 1:无需package
 // 2: 类名必须Main, 不可修改
 
-public class main3 {
+public class 蓝桥杯真题_小蓝图书馆 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int num =scan.nextInt();
