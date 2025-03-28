@@ -17,50 +17,45 @@ public class 归并排序 {
             ai[i] = a[i] - b[i];
         }
 
-        long res = mergeSortAndCount(ai, 0, n - 1); // 使用 long 防止溢出
+        long res = mergeandsort(ai, 0, n - 1);
         System.out.print(res);
         scan.close();
     }
 
-    private static long mergeSortAndCount(int[] arr, int left, int right) {
-        if (left >= right) {
-            return 0;
+    private static int mergeandsort(int[]ai,int a,int b) {
+        int count = 0;//计算有几个符合的
+        int left = a;
+        int right = b;
+        int mid = left+(right-left)/2;//防止溢出
+        if(a>=b) {
+            return 0;//找到终止点，跳出循环；
         }
-        int mid = left + (right - left) / 2;
-        long count = mergeSortAndCount(arr, left, mid) + mergeSortAndCount(arr, mid + 1, right);
-        count += merge(arr, left, mid, right);
+        count = mergeandsort(ai,left,mid)+mergeandsort(ai,mid+1,right);
+        count +=merge(a,b,mid,ai);
         return count;
     }
 
-    private static long merge(int[] arr, int left, int mid, int right) {
-        int[] temp = new int[right - left + 1];
-        int i = left;
-        int j = mid + 1;
-        int k = 0;
-        long count = 0;
 
-        // 合并时统计满足条件的对数
-        while (i <=mid && j <= right) {
-            if (arr[i] > -arr[j]) { // arr[i] + arr[j] > 0
-                count += (mid - i + 1); // arr[i] 右侧的所有元素都满足
-                temp[k++] = arr[j++];   // 注意这里先放入小的（j），保持稳定性
-            } else {
-                temp[k++] = arr[i++];
-            }
-        }
-
-        // 处理剩余元素
-        while (i <= mid) {
-            temp[k++] = arr[i++];
-        }
-        while (j <= right) {
-            temp[k++] = arr[j++];
-        }
-
-        // 复制回原数组
-        for (int p = 0; p < temp.length; p++) {
-            arr[left + p] = temp[p];
-        }
-        return count;
+    private  static int merge(int a,int b,int mid,int[]ai) {
+        int[] left1 = new int[mid-a+1];
+        int[] right1 = new int[b-mid];
+        System.arraycopy(ai,a,left1,0,left1.length);
+        System.arraycopy(ai,mid+1,right1,0,right1.length);
+        int i=0,j=0,result=0;
+        int r=mid+1;//右指针
+        for(int k=a;(k<=mid)&&(r<right1.length);) {
+              if(left1[k]+right1[r]>0) {
+                  result++;
+                  r++;
+              }else {
+                  k++;
+              }
+        }//筛选条件
+//        while(i<left1.length && j<right1.length) {//开始合并
+//            if(left1[i]+left1[j]>0) {
+//                result++;
+//            }
+//        }
+        return result;
     }
 }
