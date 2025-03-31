@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+/Users/Zhuanz1/Desktop/2025年大三下蓝桥杯/代码/0314/.metadata/.plugins/org.eclipse.jdt.core
+3179885250.index
+1865797976.index
+882364760.index

@@ -1,0 +1,10 @@
+import java.util.*;
+package 蓝桥别;
+
+public class 蓝桥别真题_拼正方形 {
+  public static void main(String args) {
+	   long n =7385137888721l ;
+	  long m = 10470245l;
+	  System.out.println(Math.sqrt(m*n*4));
+  }
+}

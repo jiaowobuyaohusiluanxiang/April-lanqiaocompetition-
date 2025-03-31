@@ -1,0 +1,29 @@
+package lanqiaobei;
+import java.util.*;
+public class grok_自定义切分 {
+    static int n,m;
+    static int mindao;
+    public static void main(String[] args){
+//        Scanner sc = new Scanner(System.in);
+//         n = sc.nextInt();
+//         m = sc.nextInt();
+//         int[][] a = new int[n][m];
+//         for(int i=0;i<n;i++) {
+//             for(int j=0;j<m;j++) {
+//                 a[i][j] = sc.nextInt();
+//             }
+//         }
+//         int temp = 0;//判断横着切还是竖着切
+//         dfs(a,temp,0);
+    	long n = 4523156326763573625l;
+         System.out.println(21354657687698567l>n);
+    }
+    private static void dfs(int[][] array,int temp,int num) {
+    	
+        for(int i=num;i<n;i++) {
+        	if(array[num][i]==1) {
+        		
+        	}
+        }
+    }
+ }
