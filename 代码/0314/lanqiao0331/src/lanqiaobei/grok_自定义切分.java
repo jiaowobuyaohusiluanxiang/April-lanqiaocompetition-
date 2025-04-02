@@ -5,9 +5,7 @@ public class grok_自定义切分 {
     static int n,m;
     static int mindao;
     public static void main(String[] args){
-    	 BigInteger a = new BigInteger("2");
-         BigInteger n = new BigInteger(29540562025129);
-         BigInteger result = a.pow(n.intValue()); // 直接调用pow方法
-         System.out.println(result);
+    	
+         System.out.println(1);
      }
  }

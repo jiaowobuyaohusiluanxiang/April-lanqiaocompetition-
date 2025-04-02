@@ -1,0 +1,8 @@
+package lanqiaobei;
+import java.util.*;
+
+public class lan蓝桥杯真题_拼正方形 {
+  public static void main(String args) {
+	   System.out.println(1>2);
+  }
+}
